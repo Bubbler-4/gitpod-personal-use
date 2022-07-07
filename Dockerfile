@@ -15,3 +15,4 @@ RUN cd /tmp \
 RUN curl -sSL https://get.haskellstack.org/ | sh
 
 USER gitpod
+RUN printf "export GTK_IM_MODULE=\"ibus\"\nexport QT4_IM_MODULE=\"ibus\"\nexport QT_IM_MODULE=\"ibus\"\nexport XMODIFIERS=\"@im=ibus\"\nibus-daemon -drx" > /home/gitpod/.xprofile
