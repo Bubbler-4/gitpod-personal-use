@@ -1,6 +1,2 @@
 image:
     file: Dockerfile
-tasks:
-  #- command: "im-config -n ibus"
-  - command: "/usr/bin/ibus-daemon -d"
-  - command: "gsettings set org.freedesktop.ibus.general engines-order \"['hangul', 'xkb:kr:kr104:kor']\"; gsettings set org.freedesktop.ibus.general preload-engines \"['hangul']\""
