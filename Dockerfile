@@ -1,7 +1,7 @@
 FROM gitpod/workspace-full-vnc:latest
 
 USER root
-RUN cat /etc/apt/sources.list
+RUN ls /etc/apt/sources.list.d
 RUN apt-get update -y -q \
   && DEBIAN_FRONTEND=noninteractive apt-get install -y -q --no-install-recommends geary dbus-x11 firefox
 
