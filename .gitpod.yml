@@ -1,2 +1,5 @@
 image:
     file: Dockerfile
+tasks:
+  - command: "im-config -n ibus"
+  - command: "/usr/bin/ibus-daemon -d"
