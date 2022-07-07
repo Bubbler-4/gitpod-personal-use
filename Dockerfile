@@ -1,7 +1,8 @@
 FROM gitpod/workspace-full-vnc:latest
 
 USER root
-RUN apt-get update -y -q \
+RUN curl -sSL https://download.opensuse.org/repositories/home:/ungoogled_chromium/Ubuntu_Focal/Release.key | apt-key add - \
+  && apt-get update -y -q \
   && DEBIAN_FRONTEND=noninteractive apt-get install -y -q --no-install-recommends geary dbus-x11 firefox
 
 RUN cd /tmp \
